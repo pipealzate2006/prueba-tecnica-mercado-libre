@@ -19,7 +19,7 @@ export const Search = () => {
                 placeholder="Laptops, smartphones, ..."
                 className="bg-gray-200 border-0 focus:outline-none mr-1"
               />
-              <button>
+              <button name="" type="submit">
                 <i className="fa-solid fa-magnifying-glass text-gray-500"></i>
               </button>
             </form>

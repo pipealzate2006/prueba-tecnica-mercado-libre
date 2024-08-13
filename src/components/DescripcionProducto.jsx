@@ -7,7 +7,7 @@ export const DescripcionProducto = () => {
       <Search />
       <section className="flex flex-col items-center justify-center min-h-screen">
         <div className="flex mb-10">
-          <img className="w-48 rounded-full" src={Images.bazar_online} alt="" />
+          <img className="w-60 rounded-full" src={Images.bazar_online} alt="" />
           <div className="flex flex-col">
             <img className="w-20" src={Images.bazar_online} alt="" />
             <img className="w-20" src={Images.bazar_online} alt="" />
@@ -28,7 +28,7 @@ export const DescripcionProducto = () => {
             exercitationem necessitatibus et numquam optio.
           </p>
         </div>
-        <button className="block m-10 h-14 bg-purple-400 p-2 shadow-lg text-white font-bold rounded-2xl">
+        <button className="block m-10 h-14 bg-purple-800 p-2 shadow-lg text-white font-bold rounded-2xl">
           Comprar
         </button>
       </section>

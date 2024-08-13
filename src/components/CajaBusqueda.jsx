@@ -21,7 +21,7 @@ export const CajaBusqueda = () => {
           <i className="fa-solid fa-magnifying-glass text-gray-500"></i>
         </div>
         <Link
-          className="p-2 bg-green-400 text-white rounded-3xl shadow-lg"
+          className="p-2 bg-green-900 text-white rounded-3xl shadow-lg"
           type="submit"
           to="/ListaResultados"
         >
