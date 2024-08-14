@@ -1,7 +1,8 @@
 import Images from "./../assets/images.js";
 import { Search } from "./search/Search.jsx";
 import { useContext } from "react";
-import { ProductsContext } from "../context/ProductsContext.jsx";
+import { ProductsContext } from "./../context/ProductsContext.jsx";
+import { Link } from "react-router-dom";
 
 const ListaResultados = () => {
   const { products } = useContext(ProductsContext);
@@ -17,7 +18,11 @@ const ListaResultados = () => {
         <div>
           <ul>
             {products.map((product) => (
-              <li key={product.id} className="flex items-center">
+              <Link
+                to={`/DescripcionProducto/${product.id}`}
+                key={product.id}
+                className="flex items-center"
+              >
                 <img
                   src={Images.bazar_online}
                   className="w-40 h-40 rounded-full"
@@ -28,7 +33,7 @@ const ListaResultados = () => {
                   <p className="line-clamp-3">{product.description}</p>
                   <h1 className="font-bold text-xl">{product.price}$</h1>
                 </div>
-              </li>
+              </Link>
             ))}
           </ul>
         </div>

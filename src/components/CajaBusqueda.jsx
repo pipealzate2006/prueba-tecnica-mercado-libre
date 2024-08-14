@@ -4,7 +4,7 @@ import { ProductsContext } from "./../context/ProductsContext.jsx";
 import { useNavigate } from "react-router-dom";
 
 export const CajaBusqueda = () => {
-  const { products, setProducts } = useContext(ProductsContext);
+  const { setProducts } = useContext(ProductsContext);
   const navigate = useNavigate();
   const [buscarProductos, setBuscarProductos] = useState({
     product: "",
@@ -70,7 +70,6 @@ export const CajaBusqueda = () => {
         <button
           className="p-2 bg-green-900 text-white rounded-3xl shadow-lg"
           type="submit"
-          // to="/ListaResultados"
         >
           Buscar
         </button>

@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import Images from "./../../assets/images.js";
 import { ProductsContext } from "./../../context/ProductsContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 export const Search = () => {
-  const { products, setProducts } = useContext(ProductsContext);
+  const navigate = useNavigate();
+  const { setProducts } = useContext(ProductsContext);
   const [query, setQuery] = useState({
     product: "",
   });
@@ -28,6 +30,7 @@ export const Search = () => {
       const dataQuery = await responseQuery.json();
       if (responseQuery.status === 200) {
         setProducts(dataQuery);
+        navigate("/ListaResultados");
       } else {
         console.log("Error al realizar la busqueda");
       }
